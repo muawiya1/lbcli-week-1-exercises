@@ -105,7 +105,7 @@ NEW_BALANCE=$(bitcoin-cli -regtest -rpcwallet=btrustwallet getbalance)
 check_cmd "New balance check"
 echo "Your treasure balance: $NEW_BALANCE BTC"
 
-COLLECTED=$(echo "$NEW_BALANCE - $BALANCE" | bc)
+COLLECTED=$NEW_BALANCE
 check_cmd "Balance calculation"
 echo "You've collected $COLLECTED BTC in treasures!"
 

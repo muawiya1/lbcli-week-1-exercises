@@ -4,7 +4,7 @@
 WALLET_ADDR=$(bitcoin-cli -regtest -rpcwallet="builderswallet" getnewaddress)
 
 #mine block
-bitcoin-cli -regtest generatetoaddress 101 "$WALLET_ADDR"
+bitcoin-cli -regtest generatetoaddress 101 "$WALLET_ADDR" > /dev/null
 
 #get balance
 bitcoin-cli -regtest -rpcwallet="builderswallet" getbalance
